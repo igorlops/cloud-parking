@@ -1,8 +1,15 @@
 package one.digital.innovation.cloudparking.model;
 
+
 import java.time.LocalDateTime;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Parking {
+
+    @Id
     private String id;
     private String license;
     private String state;
@@ -11,7 +18,6 @@ public class Parking {
     private LocalDateTime entryDate;
     private LocalDateTime exitDate;
     private Double bill;
-
 
     public Parking(String id, String license, String state, String model, String color) {
         this.id = id;
@@ -23,8 +29,6 @@ public class Parking {
 
     public Parking() {
     }
-
-
 
     public String getId() {
         return id;
